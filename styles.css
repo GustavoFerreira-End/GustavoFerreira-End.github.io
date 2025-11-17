@@ -25,13 +25,17 @@ body {
 
 .nav-bar {
     position: fixed;
-    background-color: rgba(15, 23, 42, 0.8);
+    background-color: rgba(15, 27, 51, 0.8);
     width: 100%;
     z-index: 100;
     top: 0;
     padding: 1.5rem;
+    margin: 0 40px 0 40px;
 }
-
+section{
+    min-width: 100vh;
+    min-height: 100vh;
+}
 .list {
     display: flex;
     list-style: none;
@@ -120,6 +124,7 @@ h1 {
     justify-content: center;
     gap: 2rem;
     padding: 3rem;
+    align-items: center;
 }
 .projetos-titulo{
     font-size: 3rem;
@@ -130,7 +135,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 350px;
+    height: 400px;
+    width: 400px;
     background: rgba(255, 255, 255, 0.05);
     padding: 1rem;
     border-radius: 12px;
@@ -161,4 +167,70 @@ h1 {
     font-size: 1rem;
     color: var(--claro);
     margin-top: 0.5rem;
+}
+.contatos {
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contatos-titulo{
+     font-size: 3rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.formulario-contato{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.grupo-form{
+     width: 100%;
+}
+
+.campo-form,
+.text-form {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--vidro);
+    border: 1px solid var(--vidro);
+    border-radius: 8px;
+    color: var(--claro);
+    font-size: 1rem;
+    outline: none;
+}
+
+.campo-form::placeholder,
+.text-form::placeholder {
+    color: var(--claro);
+    opacity: 0.7;
+}
+
+.text-form {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.btn-enviar {
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    border: none;
+    border-radius: 8px;
+    color: var(--claro);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    align-self: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+    text-align: center;
+}
+
+.btn-enviar:hover {
+    transform: scale(1.05);
 }

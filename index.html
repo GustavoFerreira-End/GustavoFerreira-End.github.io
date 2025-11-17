@@ -21,7 +21,7 @@
     </nav>
 
     <main id="inicio" class="cabecalho">
-        <img src="img/imagem1.png" alt="Foto" class="foto-perfil">
+        <img src="img/foto-perfil.jpg" alt="Foto" class="foto-perfil">
         <h1>Gustavo Ferreira</h1>
         <p class="subtitulo">Desenvolvedor Front-End Júnior</p>
     </main>
@@ -31,46 +31,73 @@
 
         <div class="form-contato">
             <p class="paragrafo">
-                Iniciante na programação, veio-se o interesse no Front-End, aprendizado seguindo pela plataforma UDEMY, curso completo de HTML, CSS E JS, Sigo fazendo projetos guiados e sozinho
+                Olá! Meu nome é Gustavo Ferreira De Oliviera, tenho 20 anos e sou um desenvolvedor front-end júnior apaixonado por criar experiências digitais envolventes. Atualmente, estou cursando Sistemas e Informação na UFU Uberlândia, onde estou aprimorando minhas habilidades técnicas e adquirindo novos conhecimentos na área de desenvolvimento, porém o foco em Front-End é o que mais me atrai, sigo fazendo cursos online pela UDEMY entre outros para focar no Front-End além da Faculdade.
             </p>
         </div>
     </section>
 
     <h2 class="projetos-titulo">Meus Projetos</h2>
 
-<section id="projetos" class="projetos">
+    <section id="projetos" class="projetos">
 
-    <div class="projeto-item animation">
-        <img class="projetos-img" src="img/projeto1.png" alt="projeto1">
-        <h3>Projeto 1</h3>
-        <p>Projeto de uma cafeteria com menu moderno e layout responsivo<a href="https://github.com/GustavoFerreira-End/Coffe-Page/tree/master" target="_blank">Saiba Mais</a></p>
-    </div>
+        <div class="projeto-item animation">
+            <img class="projetos-img" src="img/projeto1.png" alt="projeto1">
+            <h3>Projeto 1</h3>
+            <p>Projeto de uma cafeteria com menu moderno e layout Simples, apenas HTML e CSS <a href="https://github.com/GustavoFerreira-End/Coffe-Page/tree/master" target="_blank">Saiba Mais</a></p>
+        </div>
 
-    <div class="projeto-item animation">
-        <img class="projetos-img" src="img/projeto2.png" alt="projeto2">
-        <h3>Espaço Projeto 2</h3>
-        <p>Não inserido ainda</p>
-    </div>
+        <div class="projeto-item animation">
+            <img class="projetos-img" src="img/projeto2.png" alt="projeto2">
+            <h3>Espaço Projeto 2</h3>
+            <p>Não inserido ainda</p>
+        </div>
 
-    <div class="projeto-item animation">
-        <img class="projetos-img" src="img/projeto3.png" alt="projeto3">
-        <h3>Espaço Projeto 3</h3>
-        <p>Não inserido ainda</p>
-    </div>
+        <div class="projeto-item animation">
+            <img class="projetos-img" src="img/projeto3.png" alt="projeto3">
+            <h3>Espaço Projeto 3</h3>
+            <p>Não inserido ainda</p>
+        </div>
 
-</section>
+    </section>
 
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Contatos</h2>
         <form class="formulario-contato" id="formulario">
             <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form">
+                <input placeholder="Nome" class="campo-form" id="form-nome">
             </div>
             <div class="grupo-form">
-                <textarea class="text-form" placeholder="Digite sua Mensagem"></textarea>
+                <textarea class="text-form" placeholder="Digite sua Mensagem" id="form-mensagem"></textarea>
             </div>
+            <a href="https://w.app/s7xbqw" target="_blank" class="btn-enviar" id="btn-whatsapp">Enviar para WhatsApp</a>
         </form>
     </section>
+
+    <script>
+        document.getElementById('btn-whatsapp').addEventListener('click', function(event) {
+          
+            event.preventDefault();
+
+           
+            const nome = document.getElementById('form-nome').value;
+            const mensagem = document.getElementById('form-mensagem').value;
+
+           
+            const baseUrl = this.href;
+
+          
+            const textoMensagem = `Olá! Meu nome é ${nome}.\n\n${mensagem}`;
+
+          
+            const textoCodificado = encodeURIComponent(textoMensagem);
+
+            
+            const urlFinal = `${baseUrl}?text=${textoCodificado}`;
+
+          
+            window.open(urlFinal, '_blank');
+        });
+    </script>
 
 </body>
 </html>
